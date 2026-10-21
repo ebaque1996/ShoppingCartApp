@@ -1,0 +1,13 @@
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\bin\Debug\net8.0\ShoppingCart.Domain.deps.json
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\bin\Debug\net8.0\ShoppingCart.Domain.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\bin\Debug\net8.0\ShoppingCart.Domain.pdb
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.AssemblyInfoInputs.cache
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.AssemblyInfo.cs
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.csproj.CoreCompileInputs.cache
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.sourcelink.json
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\refint\ShoppingCart.Domain.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ShoppingCart.Domain.pdb
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\ref\ShoppingCart.Domain.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Domain\obj\Debug\net8.0\Shopping.717CC2F5.Up2Date

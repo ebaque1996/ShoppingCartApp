@@ -1,0 +1,6 @@
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.AssemblyInfo.cs
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.sourcelink.json
