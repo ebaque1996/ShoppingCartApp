@@ -10,4 +10,8 @@
     <ProjectReference Include="..\ShoppingCart.Application\ShoppingCart.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.*" />
+  </ItemGroup>
+
 </Project>
