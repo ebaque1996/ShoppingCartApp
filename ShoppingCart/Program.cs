@@ -1,5 +1,7 @@
+using Microsoft.EntityFrameworkCore;
 using ShoppingCart.Application.Interfaces;
 using ShoppingCart.Application.Services;
+using ShoppingCart.Infraestructure.Persistence.Contexts;
 using ShoppingCart.Infraestructure.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
+builder.Services.AddDbContext<ShoppingCartDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

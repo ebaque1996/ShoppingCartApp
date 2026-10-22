@@ -4,3 +4,17 @@ C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\D
 C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.AssemblyInfo.cs
 C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.csproj.CoreCompileInputs.cache
 C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.sourcelink.json
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Infraestructure.deps.json
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Infraestructure.runtimeconfig.json
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Infraestructure.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Infraestructure.pdb
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Application.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Domain.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Application.pdb
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\bin\Debug\net8.0\ShoppingCart.Domain.pdb
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\Shopping.D613214A.Up2Date
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\refint\ShoppingCart.Infraestructure.dll
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.pdb
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ShoppingCart.Infraestructure.genruntimeconfig.cache
+C:\Users\EBAQUE1996\source\repos\ShoppingCart\ShoppingCart.Infraestructure\obj\Debug\net8.0\ref\ShoppingCart.Infraestructure.dll
