@@ -18,6 +18,8 @@ public class ShoppingCartDbContext : DbContext
     }
 
     public DbSet<Product> Products => Set<Product>();
+    public DbSet<Cart> Carts => Set<Cart>();
+    public DbSet<CartItem> CartItems => Set<CartItem>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

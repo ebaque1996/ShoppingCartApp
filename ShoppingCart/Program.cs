@@ -15,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<IProductRepository, SqlProductRepository>();
+builder.Services.AddScoped<CartService>();
+builder.Services.AddScoped<ICartRepository, SqlCartRepository>();
 builder.Services.AddDbContext<ShoppingCartDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));

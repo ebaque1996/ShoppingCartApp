@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "ShoppingCart.Api.Controllers.CartController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/carts/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ShoppingCart.Api.Controllers.ProductController",
     "Method": "GetAll",
     "RelativePath": "api/products",
