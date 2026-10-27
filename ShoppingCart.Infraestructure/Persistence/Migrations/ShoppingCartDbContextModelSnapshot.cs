@@ -96,6 +96,208 @@ namespace ShoppingCart.Infraestructure.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "RGB mechanical keyboard with red switches",
+                            Name = "Mechanical Keyboard",
+                            Price = 75.50m,
+                            Stock = 20
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Ergonomic mouse with high precision sensor",
+                            Name = "Wireless Gaming Mouse",
+                            Price = 45.00m,
+                            Stock = 35
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "IPS Full HD monitor for productivity and gaming",
+                            Name = "UltraWide Monitor 29\"",
+                            Price = 299.99m,
+                            Stock = 10
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Multiport adapter with HDMI, USB 3.0, and SD card reader",
+                            Name = "USB-C Hub 7-in-1",
+                            Price = 29.99m,
+                            Stock = 50
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Over-ear wireless headphones with deep bass",
+                            Name = "Noise-Canceling Headphones",
+                            Price = 120.00m,
+                            Stock = 15
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Description = "Adjustable aluminum stand for laptops up to 17 inches",
+                            Name = "Laptop Stand",
+                            Price = 34.99m,
+                            Stock = 40
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Description = "High-speed portable solid state drive",
+                            Name = "External SSD 1TB",
+                            Price = 99.99m,
+                            Stock = 25
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Description = "Full HD webcam with built-in microphone for streaming",
+                            Name = "WebCam 1080p",
+                            Price = 49.99m,
+                            Stock = 30
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Description = "Mesh chair with lumbar support and adjustable armrests",
+                            Name = "Ergonomic Office Chair",
+                            Price = 189.99m,
+                            Stock = 8
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Description = "Dimmable desk lamp with wireless charging base",
+                            Name = "Desk LED Lamp",
+                            Price = 39.99m,
+                            Stock = 22
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Description = "Waterproof portable speaker with 12-hour battery life",
+                            Name = "Bluetooth Speaker",
+                            Price = 59.99m,
+                            Stock = 28
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Description = "Heart rate monitor, sleep tracker, and GPS",
+                            Name = "Smartwatch Fitness Tracker",
+                            Price = 89.99m,
+                            Stock = 18
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Description = "Fast Qi-certified wireless charger for smartphones",
+                            Name = "Wireless Charging Pad",
+                            Price = 22.50m,
+                            Stock = 60
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Description = "Ergonomic vertical mouse to prevent wrist strain",
+                            Name = "Vertical Mouse",
+                            Price = 32.99m,
+                            Stock = 25
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Description = "High-speed memory card with adapter",
+                            Name = "MicroSD Card 128GB",
+                            Price = 18.99m,
+                            Stock = 75
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Description = "4K@120Hz high-speed braided cable 2m",
+                            Name = "HDMI 2.1 Cable",
+                            Price = 15.00m,
+                            Stock = 100
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Description = "Fast-charging external battery pack",
+                            Name = "Portable Power Bank 20000mAh",
+                            Price = 45.50m,
+                            Stock = 30
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Description = "Large waterproof desk pad for keyboard and mouse",
+                            Name = "Desk Mat Extended",
+                            Price = 19.99m,
+                            Stock = 50
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Description = "LED ring light with tripod stand for content creators",
+                            Name = "Ring Light 10\"",
+                            Price = 35.00m,
+                            Stock = 20
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Description = "Snagless patch cable 5 meters",
+                            Name = "Ethernet Cable Cat6",
+                            Price = 9.99m,
+                            Stock = 120
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Description = "High-speed USB 3.0 storage drive",
+                            Name = "USB Flash Drive 64GB",
+                            Price = 12.50m,
+                            Stock = 90
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Description = "USB microphone for podcasting, gaming, and recording",
+                            Name = "Condenser Microphone",
+                            Price = 69.99m,
+                            Stock = 14
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Description = "Drawing tablet with stylus for digital art and design",
+                            Name = "Graphics Tablet",
+                            Price = 79.99m,
+                            Stock = 12
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Description = "Voice-controlled smart outlet compatible with Alexa and Google",
+                            Name = "Smart Plug Wi-Fi",
+                            Price = 16.99m,
+                            Stock = 45
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Description = "Organize power strips and messy cords cleanly",
+                            Name = "Cable Management Box",
+                            Price = 14.99m,
+                            Stock = 55
+                        });
                 });
 
             modelBuilder.Entity("ShoppingCart.Domain.Entities.CartItem", b =>
