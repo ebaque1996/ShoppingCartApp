@@ -41,8 +41,8 @@ namespace ShoppingCart.Api.Controllers
             return Ok(cart);
         }
 
-        // PUT: api/carts/{userId}/items
-        [HttpPut("{userId}/items")]
+        // PATCH: api/carts/{userId}/items
+        [HttpPatch("{userId}/items")]
         public async Task<IActionResult> UpdateItemQuantity(string userId, [FromBody] UpdateCartItemRequestDto request, CancellationToken cancellationToken)
         {
             try
