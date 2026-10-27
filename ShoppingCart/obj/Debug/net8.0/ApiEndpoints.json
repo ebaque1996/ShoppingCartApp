@@ -16,6 +16,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ShoppingCart.Api.Controllers.CartController",
+    "Method": "UpdateItemQuantity",
+    "RelativePath": "api/carts/{userId}/items",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ShoppingCart.Application.DTOs.Carts.UpdateCartItemRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ShoppingCart.Api.Controllers.ProductController",
     "Method": "GetAll",
     "RelativePath": "api/products",
