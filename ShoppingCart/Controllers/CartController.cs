@@ -30,15 +30,51 @@ namespace ShoppingCart.Api.Controllers
         {
             // JWT Readiness: En el futuro puedes reemplazar el parámetro 'userId' por:
             // string userId = GetCurrentUserId();
-
-            var cart = await _cartService.GetCartByUserIdAsync(userId, cancellationToken);
-
-            if (cart == null)
+            try
             {
-                return NotFound(new { message = "No active cart found for this user." });
-            }
+                var cartDto = await _cartService.GetCartByUserIdAsync(userId, cancellationToken);
 
-            return Ok(cart);
+                if (cartDto == null)
+                {
+                    return NotFound(new { message = "No active cart found for this user." });
+                }
+
+                return Ok(cartDto);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        // POST: api/carts/{userId}/items
+        [HttpPost("{userId}/items")]
+        public async Task<IActionResult> AddItemToCart(string userId, [FromBody] AddToCartRequestDto request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                // Call service to add product to the cart
+                await _cartService.AddToCartAsync(userId, request.ProductId, request.Quantity, cancellationToken);
+
+                // 201 Created (Ideal for successfully created resources)
+                return StatusCode(StatusCodes.Status201Created, new { message = "Product added to cart successfully." });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // 404 Not Found (Product not found)
+                return NotFound(new { message = ex.Message });
+            }
+            catch (InvalidOperationException ex)
+            {
+                // 409 Conflict (Insufficient stock)
+                return Conflict(new { message = ex.Message });
+            }
+            catch (ArgumentException ex)
+            {
+                // 400 Bad Request (Invalid quantity)
+                return BadRequest(new { message = ex.Message });
+            }
         }
 
         // PATCH: api/carts/{userId}/items
@@ -62,6 +98,44 @@ namespace ShoppingCart.Api.Controllers
             catch (ArgumentException ex)
             {
                 return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        // DELETE: api/carts/{userId}/items/{productId}
+        [HttpDelete("{userId}/items/{productId}")]
+        public async Task<IActionResult> RemoveItemFromCart(string userId, int productId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                // Call service to remove the product from the user's cart
+                await _cartService.RemoveItemFromCartAsync(userId, productId, cancellationToken);
+
+                // 204 No Content (Standard successful response when a resource is deleted with no body returned)
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // 404 Not Found (Cart or product does not exist)
+                return NotFound(new { message = ex.Message });
+            }
+        }
+
+        // DELETE: api/carts/{userId}
+        [HttpDelete("{userId}")]
+        public async Task<IActionResult> ClearCart(string userId, CancellationToken cancellationToken)
+        {
+            try
+            {
+                // Call service to clear/delete the entire cart
+                await _cartService.ClearCartAsync(userId, cancellationToken);
+
+                // 204 No Content (Standard successful response when a resource is deleted)
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                // 404 Not Found (Cart does not exist for this user)
+                return NotFound(new { message = ex.Message });
             }
         }
     }

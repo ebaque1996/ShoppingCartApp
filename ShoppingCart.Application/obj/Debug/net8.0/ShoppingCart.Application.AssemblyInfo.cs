@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShoppingCart.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c3a14bad090bb7b9555121a26e33864e4941054")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d543c430398718119770e57d1bdca766af1f97b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShoppingCart.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShoppingCart.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

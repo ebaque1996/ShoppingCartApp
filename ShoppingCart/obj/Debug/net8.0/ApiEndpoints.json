@@ -17,9 +17,46 @@
   },
   {
     "ContainingType": "ShoppingCart.Api.Controllers.CartController",
+    "Method": "ClearCart",
+    "RelativePath": "api/carts/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart.Api.Controllers.CartController",
+    "Method": "AddItemToCart",
+    "RelativePath": "api/carts/{userId}/items",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ShoppingCart.Application.DTOs.Carts.AddToCartRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart.Api.Controllers.CartController",
     "Method": "UpdateItemQuantity",
     "RelativePath": "api/carts/{userId}/items",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -31,6 +68,27 @@
       {
         "Name": "request",
         "Type": "ShoppingCart.Application.DTOs.Carts.UpdateCartItemRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ShoppingCart.Api.Controllers.CartController",
+    "Method": "RemoveItemFromCart",
+    "RelativePath": "api/carts/{userId}/items/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
