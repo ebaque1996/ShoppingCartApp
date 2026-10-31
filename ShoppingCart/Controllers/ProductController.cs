@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ShoppingCart.Application.DTOs.Products;
 using ShoppingCart.Application.Services;
 
@@ -41,6 +42,7 @@ namespace ShoppingCart.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize] //Protect the endpoint with authorization
         public async Task<ActionResult<ProductResponse>> Create(
             [FromBody] CreateProductRequest request,
             CancellationToken cancellationToken)
