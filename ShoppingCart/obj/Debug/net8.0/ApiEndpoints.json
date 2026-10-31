@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "ShoppingCart.Api.Controllers.LoginDto",
+        "Type": "ShoppingCart.Application.DTOs.Auth.LoginDto",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "ShoppingCart.Api.Controllers.RegisterDto",
+        "Type": "ShoppingCart.Application.DTOs.Auth.RegisterDto",
         "IsRequired": true
       }
     ],

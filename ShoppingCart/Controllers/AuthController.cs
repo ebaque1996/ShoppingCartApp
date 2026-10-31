@@ -1,25 +1,34 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using ShoppingCart.Application.DTOs.Auth;
+using ShoppingCart.Application.Interfaces;
 
 namespace ShoppingCart.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public sealed class AuthController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly ITokenService _tokenService;
 
-        public AuthController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AuthController(UserManager<IdentityUser> userManager, ITokenService tokenService)
         {
             _userManager = userManager;
-            _signInManager = signInManager;
+            _tokenService = tokenService;
         }
 
+        // POST: api/auth/register
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto model)
         {
-            var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+            var user = new IdentityUser
+            {
+                UserName = model.Email,
+                Email = model.Email
+            };
+
+            // Create the user securely with ASP.NET Core Identity (handles password hashing)
             var result = await _userManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)
@@ -30,22 +39,28 @@ namespace ShoppingCart.Api.Controllers
             return Ok(new { message = "User registered successfully." });
         }
 
+        // POST: api/auth/login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto model)
         {
-            var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, lockoutOnFailure: false);
-
-            if (!result.Succeeded)
+            // 1. Find user by email
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
             {
-                return Unauthorized(new { message = "Invalid login attempt." });
+                return Unauthorized(new { message = "Invalid credentials." });
             }
 
-            // Aquí normalmente generarías y retornarías un Token JWT para una API REST
-            return Ok(new { message = "Login successful." });
+            // 2. Validate password
+            var isPasswordValid = await _userManager.CheckPasswordAsync(user, model.Password);
+            if (!isPasswordValid)
+            {
+                return Unauthorized(new { message = "Invalid credentials." });
+            }
+
+            // 3. Generate JWT token using the application port service
+            var token = _tokenService.GenerateToken(user.Id, user.Email ?? user.UserName!);
+
+            return Ok(new { token = token });
         }
     }
-
-    // DTOs auxiliares para el ejemplo
-    public record RegisterDto(string Email, string Password);
-    public record LoginDto(string Email, string Password);
 }
